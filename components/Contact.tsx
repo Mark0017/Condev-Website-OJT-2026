@@ -1,10 +1,42 @@
+"use client";
+
+import { useActionState, useEffect, useRef } from "react";
 import { Mail, MapPin, Phone } from "lucide-react";
 
+import { submitContactLead } from "@/app/actions";
+import { initialFormState } from "@/lib/formState";
+
+function FieldError({ id, message }: { id: string; message?: string }) {
+  if (!message) {
+    return null;
+  }
+
+  return (
+    <p id={id} className="mt-2 text-sm text-[#F7C5A3]">
+      {message}
+    </p>
+  );
+}
+
 export default function Contact() {
+  const [state, formAction, pending] = useActionState(
+    submitContactLead,
+    initialFormState,
+  );
+  const formRef = useRef<HTMLFormElement>(null);
+  const fieldErrors = state?.fieldErrors ?? {};
+  const status = state?.status ?? "idle";
+  const message = state?.message ?? "";
+
+  useEffect(() => {
+    if (status === "success") {
+      formRef.current?.reset();
+    }
+  }, [status]);
+
   return (
     <section id="contact" className="bg-[#1B2A4A] py-24 text-white lg:py-32">
       <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:px-8">
-        {/* LEFT SIDE */}
         <div>
           <span className="mb-4 block text-xs font-semibold uppercase tracking-[0.15em] text-[#C17A3A]">
             Contact
@@ -19,9 +51,7 @@ export default function Contact() {
             Reach out and our team will gladly assist you.
           </p>
 
-          {/* CONTACT DETAILS */}
           <div className="space-y-6">
-            {/* EMAIL */}
             <div className="flex items-start gap-4">
               <div className="flex h-11 w-11 items-center justify-center rounded-lg border border-[#C17A3A]/40 bg-white/5 text-[#C17A3A]">
                 <Mail className="h-5 w-5" strokeWidth={1.8} />
@@ -35,7 +65,6 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* ADDRESS */}
             <div className="flex items-start gap-4">
               <div className="flex h-11 w-11 items-center justify-center rounded-lg border border-[#C17A3A]/40 bg-white/5 text-[#C17A3A]">
                 <MapPin className="h-5 w-5" strokeWidth={1.8} />
@@ -53,7 +82,6 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* PHONE */}
             <div className="flex items-start gap-4">
               <div className="flex h-11 w-11 items-center justify-center rounded-lg border border-[#C17A3A]/40 bg-white/5 text-[#C17A3A]">
                 <Phone className="h-5 w-5" strokeWidth={1.8} />
@@ -69,40 +97,103 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* RIGHT SIDE FORM */}
-        <form 
+        <form
+          ref={formRef}
+          action={formAction}
           id="contact-form"
-          className="space-y-4 rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
-          <input
-            type="text"
-            placeholder="Full Name"
-            className="w-full rounded-md border border-white/15 bg-white/10 px-4 py-3 text-white placeholder:text-white/50 outline-none"
-          />
+          className="space-y-4 rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm"
+        >
+          <div>
+            <input
+              name="fullName"
+              type="text"
+              placeholder="Full Name"
+              autoComplete="name"
+              required
+              aria-invalid={Boolean(fieldErrors.fullName)}
+              aria-describedby={
+                fieldErrors.fullName ? "contact-fullName-error" : undefined
+              }
+              className="w-full rounded-md border border-white/15 bg-white/10 px-4 py-3 text-white placeholder:text-white/50 outline-none transition focus:border-[#C17A3A]"
+            />
+            <FieldError
+              id="contact-fullName-error"
+              message={fieldErrors.fullName}
+            />
+          </div>
 
-          <input
-            type="email"
-            placeholder="Email Address"
-            className="w-full rounded-md border border-white/15 bg-white/10 px-4 py-3 text-white placeholder:text-white/50 outline-none"
-          />
+          <div>
+            <input
+              name="email"
+              type="email"
+              placeholder="Email Address"
+              autoComplete="email"
+              required
+              aria-invalid={Boolean(fieldErrors.email)}
+              aria-describedby={
+                fieldErrors.email ? "contact-email-error" : undefined
+              }
+              className="w-full rounded-md border border-white/15 bg-white/10 px-4 py-3 text-white placeholder:text-white/50 outline-none transition focus:border-[#C17A3A]"
+            />
+            <FieldError
+              id="contact-email-error"
+              message={fieldErrors.email}
+            />
+          </div>
 
-          <input
-            type="text"
-            placeholder="Phone Number"
-            className="w-full rounded-md border border-white/15 bg-white/10 px-4 py-3 text-white placeholder:text-white/50 outline-none"
-          />
+          <div>
+            <input
+              name="phone"
+              type="tel"
+              placeholder="Phone Number"
+              autoComplete="tel"
+              required
+              aria-invalid={Boolean(fieldErrors.phone)}
+              aria-describedby={
+                fieldErrors.phone ? "contact-phone-error" : undefined
+              }
+              className="w-full rounded-md border border-white/15 bg-white/10 px-4 py-3 text-white placeholder:text-white/50 outline-none transition focus:border-[#C17A3A]"
+            />
+            <FieldError
+              id="contact-phone-error"
+              message={fieldErrors.phone}
+            />
+          </div>
 
-          <textarea
-            placeholder="Your Message"
-            rows={5}
-            className="w-full rounded-md border border-white/15 bg-white/10 px-4 py-3 text-white placeholder:text-white/50 outline-none"
-          ></textarea>
+          <div>
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows={5}
+              required
+              aria-invalid={Boolean(fieldErrors.message)}
+              aria-describedby={
+                fieldErrors.message ? "contact-message-error" : undefined
+              }
+              className="w-full rounded-md border border-white/15 bg-white/10 px-4 py-3 text-white placeholder:text-white/50 outline-none transition focus:border-[#C17A3A]"
+            ></textarea>
+            <FieldError
+              id="contact-message-error"
+              message={fieldErrors.message}
+            />
+          </div>
 
-          <button
-            type="submit"
-            className="rounded-md bg-[#C17A3A] px-8 py-3 font-semibold text-white transition hover:bg-[#D4845A]"
-          >
-            Send Inquiry
-          </button>
+          <div className="flex flex-col gap-3 pt-2 sm:flex-row sm:items-center sm:justify-between">
+            <button
+              type="submit"
+              disabled={pending}
+              className="rounded-md bg-[#C17A3A] px-8 py-3 font-semibold text-white transition hover:bg-[#D4845A] disabled:cursor-not-allowed disabled:opacity-70"
+            >
+              {pending ? "Sending..." : "Send Inquiry"}
+            </button>
+
+            <p
+              aria-live="polite"
+              className={`text-sm ${status === "success" ? "text-[#9AE6B4]" : "text-white/75"}`}
+            >
+              {message}
+            </p>
+          </div>
         </form>
       </div>
     </section>

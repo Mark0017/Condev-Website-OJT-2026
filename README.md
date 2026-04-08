@@ -69,6 +69,12 @@ Open `http://localhost:3000` in your browser.
 - `npm run start` runs the production server
 - `npm run lint` checks the project with ESLint
 
+## Google Sheets Integration
+
+The contact form and careers application popup can send submissions to Google Sheets.
+
+Setup guide: `GOOGLE_SHEETS_SETUP.md`
+
 ## Notes
 
 - Project images are stored in `public/images/`
