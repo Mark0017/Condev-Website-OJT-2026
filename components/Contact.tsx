@@ -35,23 +35,23 @@ export default function Contact() {
   }, [status]);
 
   return (
-    <section id="contact" className="bg-[#1B2A4A] py-24 text-white lg:py-32">
-      <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:px-8">
+    <section id="contact" className="bg-[#1B2A4A] py-20 text-white lg:py-24">
+      <div className="mx-auto grid max-w-7xl gap-10 px-5 lg:grid-cols-2 lg:px-8">
         <div>
           <span className="mb-4 block text-xs font-semibold uppercase tracking-[0.15em] text-[#C17A3A]">
             Contact
           </span>
 
-          <h2 className="mb-6 font-serif text-4xl lg:text-5xl">
+          <h2 className="mb-5 font-serif text-3xl sm:text-4xl lg:text-[2.9rem]">
             Let&apos;s Start a Conversation
           </h2>
 
-          <p className="mb-10 max-w-xl text-white/80">
+          <p className="mb-8 max-w-xl text-[0.98rem] leading-relaxed text-white/80 sm:text-[1rem]">
             Interested in our developments or looking for your next home?
             Reach out and our team will gladly assist you.
           </p>
 
-          <div className="space-y-6">
+          <div className="space-y-5">
             <div className="flex items-start gap-4">
               <div className="flex h-11 w-11 items-center justify-center rounded-lg border border-[#C17A3A]/40 bg-white/5 text-[#C17A3A]">
                 <Mail className="h-5 w-5" strokeWidth={1.8} />
@@ -101,7 +101,7 @@ export default function Contact() {
           ref={formRef}
           action={formAction}
           id="contact-form"
-          className="space-y-4 rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm"
+          className="space-y-4 rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm sm:p-6"
         >
           <div>
             <input

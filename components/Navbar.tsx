@@ -27,13 +27,13 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="flex h-17 items-center justify-between">
+      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+        <div className="flex h-16 items-center justify-between lg:h-[4.5rem]">
           {/* LOGO */}
           <a href="#" className="flex items-center" onClick={closeMenu}>
-            <div className="flex w-[250px] flex-col items-center justify-center text-center leading-[0.95] sm:w-[280px]">
+            <div className="flex w-[190px] flex-col items-center justify-center text-center leading-[0.95] sm:w-[240px]">
               <span
-                className={`w-full text-center text-[28px] font-black uppercase tracking-[0.015em] transition-all duration-300 sm:text-[18.5px] ${
+                className={`w-full text-center text-[17px] font-black uppercase tracking-[0.015em] transition-all duration-300 sm:text-[18.5px] ${
                   scrolled
                     ? "text-[#223468]"
                     : "text-white/70 drop-shadow-[0_2px_12px_rgba(0,0,0,0.35)]"
@@ -43,7 +43,7 @@ export default function Navbar() {
               </span>
 
               <span
-                className={`mt-0.5 w-full text-center text-[8.5px] font-semibold uppercase tracking-[0.11em] transition-all duration-300 sm:text-[7.7px] ${
+                className={`mt-0.5 w-full text-center text-[6.8px] font-semibold uppercase tracking-[0.11em] transition-all duration-300 sm:text-[7.7px] ${
                   scrolled
                     ? "text-[#223468]/95"
                     : "text-white/50 drop-shadow-[0_1px_8px_rgba(0,0,0,0.28)]"
@@ -55,10 +55,10 @@ export default function Navbar() {
           </a>
 
           {/* DESKTOP MENU */}
-          <div className="hidden items-center gap-10 md:flex">
+          <div className="hidden items-center gap-7 md:flex lg:gap-8">
             <a
               href="#about"
-              className={`group relative text-[18px] font-medium transition-colors duration-300 ${
+              className={`group relative text-[15px] font-medium transition-colors duration-300 lg:text-[16px] ${
                 scrolled
                   ? "text-black/80 hover:text-[#1F2D5A]"
                   : "text-white/90 hover:text-white"
@@ -74,7 +74,7 @@ export default function Navbar() {
 
             <a
               href="#projects"
-              className={`group relative text-[18px] font-medium transition-colors duration-300 ${
+              className={`group relative text-[15px] font-medium transition-colors duration-300 lg:text-[16px] ${
                 scrolled
                   ? "text-black/80 hover:text-[#1F2D5A]"
                   : "text-white/90 hover:text-white"
@@ -90,7 +90,7 @@ export default function Navbar() {
 
             <a
               href="#careers"
-              className={`group relative text-[18px] font-medium transition-colors duration-300 ${
+              className={`group relative text-[15px] font-medium transition-colors duration-300 lg:text-[16px] ${
                 scrolled
                   ? "text-black/80 hover:text-[#1F2D5A]"
                   : "text-white/90 hover:text-white"
@@ -106,7 +106,7 @@ export default function Navbar() {
 
             <a
               href="#contact"
-              className={`group relative text-[18px] font-medium transition-colors duration-300 ${
+              className={`group relative text-[15px] font-medium transition-colors duration-300 lg:text-[16px] ${
                 scrolled
                   ? "text-black/80 hover:text-[#1F2D5A]"
                   : "text-white/90 hover:text-white"
@@ -122,7 +122,7 @@ export default function Navbar() {
 
             <a
               href="#contact-form"
-              className={`rounded-xl px-7 py-1.5 text-[18px] transition-all duration-300 ${
+              className={`rounded-xl px-5 py-2 text-[14px] font-semibold transition-all duration-300 lg:px-6 lg:text-[15px] ${
                 scrolled
                   ? "bg-[#1F2D5A] text-white hover:bg-[#162046]"
                   : "border border-white/40 bg-transparent text-white hover:bg-white hover:text-[#1F2D5A]"

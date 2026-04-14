@@ -37,33 +37,33 @@ export default function About() {
       {/* STATS */}
       <section
         id="stats"
-        className="border-y border-[#E8E4DF] bg-[#F2EFE9] py-16 lg:py-20"
+        className="border-y border-[#E8E4DF] bg-[#F2EFE9] py-14 lg:py-16"
       >
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <div className="grid grid-cols-1 gap-0 sm:grid-cols-3">
-            <div className="border-b border-[#E8E4DF] px-6 py-8 text-center sm:border-b-0 sm:border-r sm:py-2">
-              <div className="mb-2 font-serif text-4xl text-[#C17A3A] lg:text-5xl">
+            <div className="border-b border-[#E8E4DF] px-4 py-7 text-center sm:border-b-0 sm:border-r sm:py-2">
+              <div className="mb-2 font-serif text-3xl text-[#C17A3A] lg:text-4xl">
                 25+
               </div>
-              <div className="text-sm font-medium uppercase tracking-wide text-[#6B7280]">
+              <div className="text-[0.8rem] font-medium uppercase tracking-wide text-[#6B7280]">
                 Years in Real Estate
               </div>
             </div>
 
-            <div className="border-b border-[#E8E4DF] px-6 py-8 text-center sm:border-b-0 sm:border-r sm:py-2">
-              <div className="mb-2 font-serif text-4xl text-[#C17A3A] lg:text-5xl">
+            <div className="border-b border-[#E8E4DF] px-4 py-7 text-center sm:border-b-0 sm:border-r sm:py-2">
+              <div className="mb-2 font-serif text-3xl text-[#C17A3A] lg:text-4xl">
                 1500+
               </div>
-              <div className="text-sm font-medium uppercase tracking-wide text-[#6B7280]">
+              <div className="text-[0.8rem] font-medium uppercase tracking-wide text-[#6B7280]">
                 Units Delivered
               </div>
             </div>
 
-            <div className="px-6 py-8 text-center sm:py-2">
-              <div className="mb-2 font-serif text-4xl text-[#C17A3A] lg:text-5xl">
+            <div className="px-4 py-7 text-center sm:py-2">
+              <div className="mb-2 font-serif text-3xl text-[#C17A3A] lg:text-4xl">
                 4
               </div>
-              <div className="text-sm font-medium uppercase tracking-wide text-[#6B7280]">
+              <div className="text-[0.8rem] font-medium uppercase tracking-wide text-[#6B7280]">
                 Total Projects
               </div>
             </div>
@@ -72,19 +72,19 @@ export default function About() {
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="bg-[#FAF8F5] py-24 lg:py-32">
-        <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2 lg:gap-24 lg:px-8">
+      <section id="about" className="bg-[#FAF8F5] py-20 lg:py-24">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 lg:grid-cols-2 lg:gap-16 lg:px-8">
           <div>
             <span className="mb-4 block text-xs font-semibold uppercase tracking-[0.15em] text-[#C17A3A]">
               Who We Are
             </span>
 
-            <h2 className="mb-8 font-serif text-4xl leading-tight text-[#1B2A4A] lg:text-5xl">
+            <h2 className="mb-6 font-serif text-3xl leading-tight text-[#1B2A4A] sm:text-4xl lg:text-[2.9rem]">
               A Track Record Worth Trusting.
             </h2>
 
-            <div className="space-y-5">
-              <p className="text-base leading-relaxed text-[#4A4A4A] lg:text-lg">
+            <div className="space-y-4">
+              <p className="text-[0.98rem] leading-relaxed text-[#4A4A4A] lg:text-[1.04rem]">
                 Condev was founded on the belief that buyers deserve more than
                 what they pay for — in the quality of their home, the character
                 of their community, and the long-term return on their
@@ -92,7 +92,7 @@ export default function About() {
                 the cities we develop in to the homes we deliver.
               </p>
 
-              <p className="text-base leading-relaxed text-[#4A4A4A] lg:text-lg">
+              <p className="text-[0.98rem] leading-relaxed text-[#4A4A4A] lg:text-[1.04rem]">
                 Over 25 years and 1,500+ homes later, we&apos;ve built a track
                 record of developments that hold up — and appreciate. The
                 confidence of our returning buyers is, for us, the most

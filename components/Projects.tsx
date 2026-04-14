@@ -16,7 +16,7 @@ export default function Projects() {
       description:
         "Building on the success of Bel-Air Residences, Bel-Air Villas is Condev's premium offering in Lipa — a naturally cool enclave of lush green spaces with mountain views, enhanced amenities, and a new lifestyle district taking shape within reach.",
       image: "/images/bel-air-villas.webp",
-      link: "#",
+      link: "https://www.belairvillaslipa.com/",
     },
     {
       title: "Bel-Air Residences",
@@ -53,18 +53,18 @@ export default function Projects() {
 
   return (
     <>
-      <section id="projects" className="bg-[#F2EFE9] py-24 lg:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mb-16 text-center">
+      <section id="projects" className="bg-[#F2EFE9] py-20 lg:py-24">
+        <div className="mx-auto max-w-7xl px-5 lg:px-8">
+          <div className="mb-12 text-center">
             <span className="mb-4 block text-xs font-semibold uppercase tracking-[0.15em] text-[#C17A3A]">
               Our Work
             </span>
-            <h2 className="font-serif text-4xl leading-tight text-[#1B2A4A] lg:text-5xl">
+            <h2 className="font-serif text-3xl leading-tight text-[#1B2A4A] sm:text-4xl lg:text-[2.9rem]">
               Featured Developments
             </h2>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:gap-10">
+          <div className="grid gap-6 md:grid-cols-2 lg:gap-8">
             {featuredProjects.map((project, index) => (
               <div
                 key={index}
@@ -85,7 +85,7 @@ export default function Projects() {
                   </div>
                 </div>
 
-                <div className="p-6 lg:p-8">
+                <div className="p-5 lg:p-6">
                   <div className="mb-3 flex items-center gap-1.5 text-[#C17A3A]">
                     <MapPin className="h-4 w-4" strokeWidth={1.8} />
                     <span className="text-xs font-medium tracking-wide">
@@ -93,16 +93,18 @@ export default function Projects() {
                     </span>
                   </div>
 
-                  <h3 className="mb-3 font-serif text-2xl text-[#1B2A4A] lg:text-3xl">
+                  <h3 className="mb-3 font-serif text-[1.6rem] text-[#1B2A4A] lg:text-[1.9rem]">
                     {project.title}
                   </h3>
 
-                  <p className="mb-6 text-sm leading-relaxed text-[#6B7280]">
+                  <p className="mb-5 text-[0.92rem] leading-relaxed text-[#6B7280]">
                     {project.description}
                   </p>
 
                   <a
                     href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="group/btn inline-flex items-center gap-2 rounded-md border-2 border-[#1B2A4A] px-5 py-2.5 text-sm font-semibold text-[#1B2A4A] transition-all duration-200 hover:bg-[#1B2A4A] hover:text-white"
                   >
                     View Project Website
@@ -115,9 +117,9 @@ export default function Projects() {
             ))}
           </div>
 
-          <div className="mt-16">
+          <div className="mt-14">
             <div className="mb-8 flex items-center gap-4">
-              <span className="text-xs font-semibold uppercase tracking-[0.15em] text-[#6B7280]">
+              <span className="text-[0.72rem] font-semibold uppercase tracking-[0.15em] text-[#6B7280]">
                 Completed Developments
               </span>
               <div className="h-px flex-1 bg-[#E8E4DF]"></div>
@@ -167,37 +169,37 @@ export default function Projects() {
         </div>
       </section>
 
-      <section className="bg-[#F7F5F1] py-24 lg:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto mb-16 max-w-4xl text-center lg:mb-24">
+      <section className="bg-[#F7F5F1] py-20 lg:py-24">
+        <div className="mx-auto max-w-7xl px-5 lg:px-8">
+          <div className="mx-auto mb-12 max-w-4xl text-center lg:mb-16">
             <span className="mb-5 block text-xs font-semibold uppercase tracking-[0.22em] text-[#C17A3A]">
               Why Condev
             </span>
 
-            <h2 className="font-serif text-4xl leading-tight text-[#1B2A4A] sm:text-5xl lg:text-[3.25rem]">
+            <h2 className="font-serif text-3xl leading-tight text-[#1B2A4A] sm:text-4xl lg:text-[2.9rem]">
               More Than What You Paid For.
             </h2>
 
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-[#6B7280] lg:text-[1.35rem]">
+            <p className="mx-auto mt-5 max-w-2xl text-[1rem] leading-relaxed text-[#6B7280] lg:text-[1.12rem]">
               Five things every buyer stands to gain from a Condev community.
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2">
-            <div className="relative min-h-[390px] rounded-[28px] border border-[#E6DED4] bg-white/70 p-10 shadow-[0_0_0_1px_rgba(0,0,0,0.01)]">
-              <div className="mb-10 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#F3ECE5] text-[#C17A3A]">
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="relative min-h-[340px] rounded-[24px] border border-[#E6DED4] bg-white/70 p-7 shadow-[0_0_0_1px_rgba(0,0,0,0.01)] sm:p-8">
+              <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#F3ECE5] text-[#C17A3A]">
                 <House className="h-7 w-7" strokeWidth={1.8} />
               </div>
 
-              <span className="absolute right-10 top-8 font-serif text-[5.5rem] leading-none text-[#F3F1ED]">
+              <span className="absolute right-7 top-6 font-serif text-[4.1rem] leading-none text-[#F3F1ED] sm:right-8 sm:top-7 sm:text-[4.6rem]">
                 1
               </span>
 
-              <h3 className="mb-6 font-serif text-[2rem] leading-tight text-[#1B2A4A]">
+              <h3 className="mb-5 font-serif text-[1.65rem] leading-tight text-[#1B2A4A] sm:text-[1.8rem]">
                 Built to Last
               </h3>
 
-              <p className="max-w-[570px] text-[1.05rem] leading-[1.7] text-[#667085]">
+              <p className="max-w-[570px] text-[0.97rem] leading-[1.7] text-[#667085] sm:text-[1rem]">
                 Every Condev home is built with care — from the structural work
                 to the materials and finishing, we hold our work to a standard
                 meant to last beyond turnover. The same attention carries into
@@ -206,40 +208,40 @@ export default function Projects() {
               </p>
             </div>
 
-            <div className="relative min-h-[390px] rounded-[28px] border border-[#E6DED4] bg-white/70 p-10 shadow-[0_0_0_1px_rgba(0,0,0,0.01)]">
-              <div className="mb-10 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#F3ECE5] text-[#C17A3A]">
+            <div className="relative min-h-[340px] rounded-[24px] border border-[#E6DED4] bg-white/70 p-7 shadow-[0_0_0_1px_rgba(0,0,0,0.01)] sm:p-8">
+              <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#F3ECE5] text-[#C17A3A]">
                 <HeartHandshake className="h-7 w-7" strokeWidth={1.8} />
               </div>
 
-              <span className="absolute right-10 top-8 font-serif text-[5.5rem] leading-none text-[#F3F1ED]">
+              <span className="absolute right-7 top-6 font-serif text-[4.1rem] leading-none text-[#F3F1ED] sm:right-8 sm:top-7 sm:text-[4.6rem]">
                 2
               </span>
 
-              <h3 className="mb-6 font-serif text-[2rem] leading-tight text-[#1B2A4A]">
+              <h3 className="mb-5 font-serif text-[1.65rem] leading-tight text-[#1B2A4A] sm:text-[1.8rem]">
                 With You Every Step
               </h3>
 
-              <p className="max-w-[570px] text-[1.05rem] leading-[1.7] text-[#667085]">
+              <p className="max-w-[570px] text-[0.97rem] leading-[1.7] text-[#667085] sm:text-[1rem]">
                 Buying a home involves a great deal of moving parts. At Condev,
                 we make sure no one is left to figure it out alone — from first
                 inquiry through financing, construction, and turnover.
               </p>
             </div>
 
-            <div className="relative min-h-[390px] rounded-[28px] border border-[#E6DED4] bg-white/70 p-10 shadow-[0_0_0_1px_rgba(0,0,0,0.01)]">
-              <div className="mb-10 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#F3ECE5] text-[#C17A3A]">
+            <div className="relative min-h-[340px] rounded-[24px] border border-[#E6DED4] bg-white/70 p-7 shadow-[0_0_0_1px_rgba(0,0,0,0.01)] sm:p-8">
+              <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#F3ECE5] text-[#C17A3A]">
                 <Users className="h-7 w-7" strokeWidth={1.8} />
               </div>
 
-              <span className="absolute right-10 top-8 font-serif text-[5.5rem] leading-none text-[#F3F1ED]">
+              <span className="absolute right-7 top-6 font-serif text-[4.1rem] leading-none text-[#F3F1ED] sm:right-8 sm:top-7 sm:text-[4.6rem]">
                 3
               </span>
 
-              <h3 className="mb-6 font-serif text-[2rem] leading-tight text-[#1B2A4A]">
+              <h3 className="mb-5 font-serif text-[1.65rem] leading-tight text-[#1B2A4A] sm:text-[1.8rem]">
                 Community by Design
               </h3>
 
-              <p className="max-w-[570px] text-[1.05rem] leading-[1.7] text-[#667085]">
+              <p className="max-w-[570px] text-[0.97rem] leading-[1.7] text-[#667085] sm:text-[1rem]">
                 The community around a home matters. Condev is deliberate about
                 who it sells to — with the goal of building neighborhoods where
                 residents share not just a pride in where they live, but a
@@ -247,20 +249,20 @@ export default function Projects() {
               </p>
             </div>
 
-            <div className="relative min-h-[390px] rounded-[28px] border border-[#E6DED4] bg-white/70 p-10 shadow-[0_0_0_1px_rgba(0,0,0,0.01)]">
-              <div className="mb-10 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#F3ECE5] text-[#C17A3A]">
+            <div className="relative min-h-[340px] rounded-[24px] border border-[#E6DED4] bg-white/70 p-7 shadow-[0_0_0_1px_rgba(0,0,0,0.01)] sm:p-8">
+              <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#F3ECE5] text-[#C17A3A]">
                 <MapPin className="h-7 w-7" strokeWidth={1.8} />
               </div>
 
-              <span className="absolute right-10 top-8 font-serif text-[5.5rem] leading-none text-[#F3F1ED]">
+              <span className="absolute right-7 top-6 font-serif text-[4.1rem] leading-none text-[#F3F1ED] sm:right-8 sm:top-7 sm:text-[4.6rem]">
                 4
               </span>
 
-              <h3 className="mb-6 font-serif text-[2rem] leading-tight text-[#1B2A4A]">
+              <h3 className="mb-5 font-serif text-[1.65rem] leading-tight text-[#1B2A4A] sm:text-[1.8rem]">
                 Ahead of the Curve
               </h3>
 
-              <p className="max-w-[570px] text-[1.05rem] leading-[1.7] text-[#667085]">
+              <p className="max-w-[570px] text-[0.97rem] leading-[1.7] text-[#667085] sm:text-[1rem]">
                 Not every great address announces itself. Condev looks for areas
                 with the right fundamentals — infrastructure, accessibility,
                 strong institutions, room to grow — before the market has fully
@@ -271,21 +273,21 @@ export default function Projects() {
             </div>
           </div>
 
-          <div className="mt-10 flex justify-center">
-            <div className="relative min-h-[390px] w-full max-w-[660px] rounded-[28px] border border-[#E6DED4] bg-white/70 p-10 shadow-[0_0_0_1px_rgba(0,0,0,0.01)]">
-              <div className="mb-10 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#F3ECE5] text-[#C17A3A]">
+          <div className="mt-8 flex justify-center">
+            <div className="relative min-h-[340px] w-full max-w-[660px] rounded-[24px] border border-[#E6DED4] bg-white/70 p-7 shadow-[0_0_0_1px_rgba(0,0,0,0.01)] sm:p-8">
+              <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#F3ECE5] text-[#C17A3A]">
                 <TrendingUp className="h-7 w-7" strokeWidth={1.8} />
               </div>
 
-              <span className="absolute right-10 top-8 font-serif text-[5.5rem] leading-none text-[#F3F1ED]">
+              <span className="absolute right-7 top-6 font-serif text-[4.1rem] leading-none text-[#F3F1ED] sm:right-8 sm:top-7 sm:text-[4.6rem]">
                 5
               </span>
 
-              <h3 className="mb-6 font-serif text-[2rem] leading-tight text-[#1B2A4A]">
+              <h3 className="mb-5 font-serif text-[1.65rem] leading-tight text-[#1B2A4A] sm:text-[1.8rem]">
                 Value that Compounds
               </h3>
 
-              <p className="max-w-[570px] text-[1.05rem] leading-[1.7] text-[#667085]">
+              <p className="max-w-[570px] text-[0.97rem] leading-[1.7] text-[#667085] sm:text-[1rem]">
                 Some properties in Condev&apos;s established communities have
                 appreciated as much as 2.5 to 3 times over the past decade.
                 Buyers who enter early — often on financing — tend to find that

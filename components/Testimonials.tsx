@@ -51,23 +51,23 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section className="bg-[#F7F5F1] py-24 lg:py-32">
-      <div className="mx-auto max-w-6xl px-6 lg:px-8">
+    <section className="bg-[#F7F5F1] py-20 lg:py-24">
+      <div className="mx-auto max-w-6xl px-5 lg:px-8">
         {/* HEADING */}
-        <div className="mb-12 text-center">
-          <h2 className="text-[1.1rem] font-bold uppercase tracking-[0.18em] text-[#C7A530] sm:text-[1.4rem]">
+        <div className="mb-10 text-center">
+          <h2 className="text-[0.92rem] font-bold uppercase tracking-[0.18em] text-[#C7A530] sm:text-[1.05rem]">
             “ TESTIMONIALS ”
           </h2>
         </div>
 
         {/* SLIDER CARD */}
         <div className="relative mx-auto max-w-5xl">
-          <div className="rounded-[2rem] bg-white px-8 py-12 text-center shadow-[0_18px_45px_rgba(0,0,0,0.18)] sm:px-14 sm:py-16">
+          <div className="rounded-[1.75rem] bg-white px-6 py-10 text-center shadow-[0_18px_45px_rgba(0,0,0,0.18)] sm:px-10 sm:py-12 lg:px-14 lg:py-16">
             <div className="mb-4 flex justify-center">
               <Quote className="h-8 w-8 text-[#C7A530]" strokeWidth={2} />
             </div>
 
-            <h3 className="mb-4 font-serif text-[2rem] font-semibold text-[#1F2D5A] sm:text-[2.2rem]">
+            <h3 className="mb-4 font-serif text-[1.7rem] font-semibold text-[#1F2D5A] sm:text-[1.95rem]">
               Voices From Our Community
             </h3>
 
@@ -82,19 +82,19 @@ export default function Testimonials() {
             </div>
 
             <div className="mx-auto max-w-4xl">
-              <p className="mb-4 text-[1.05rem] font-bold text-[#1F2D5A] sm:text-[1.25rem]">
+              <p className="mb-4 text-[0.98rem] font-bold text-[#1F2D5A] sm:text-[1.12rem]">
                 {testimonials[current].quoteTitle}
               </p>
 
-              <p className="mx-auto mb-8 max-w-3xl text-[1rem] font-semibold leading-[1.8] text-[#23355F] sm:text-[1.2rem]">
+              <p className="mx-auto mb-7 max-w-3xl text-[0.96rem] font-semibold leading-[1.8] text-[#23355F] sm:text-[1.06rem]">
                 {testimonials[current].message}
               </p>
 
-              <p className="mb-2 text-[1rem] font-bold text-[#23355F]">
+              <p className="mb-2 text-[0.96rem] font-bold text-[#23355F]">
                 {testimonials[current].name}
               </p>
 
-              <p className="text-[1rem] font-semibold text-[#C7A530]">
+              <p className="text-[0.95rem] font-semibold text-[#C7A530]">
                 {testimonials[current].role}
               </p>
             </div>
@@ -118,7 +118,7 @@ export default function Testimonials() {
           <button
             onClick={prevSlide}
             aria-label="Previous testimonial"
-            className="absolute left-0 top-1/2 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#1F2D5A] shadow-lg transition hover:scale-105 hover:bg-[#F8F8F8]"
+            className="absolute left-2 top-1/2 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#1F2D5A] shadow-lg transition hover:scale-105 hover:bg-[#F8F8F8] sm:flex lg:left-0 lg:h-12 lg:w-12 lg:-translate-x-1/2"
           >
             <ChevronLeft className="h-6 w-6" />
           </button>
@@ -127,7 +127,7 @@ export default function Testimonials() {
           <button
             onClick={nextSlide}
             aria-label="Next testimonial"
-            className="absolute right-0 top-1/2 flex h-12 w-12 translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#1F2D5A] shadow-lg transition hover:scale-105 hover:bg-[#F8F8F8]"
+            className="absolute right-2 top-1/2 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#1F2D5A] shadow-lg transition hover:scale-105 hover:bg-[#F8F8F8] sm:flex lg:right-0 lg:h-12 lg:w-12 lg:translate-x-1/2"
           >
             <ChevronRight className="h-6 w-6" />
           </button>
